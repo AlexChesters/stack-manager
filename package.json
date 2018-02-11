@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Manage your AWS Cloudformation stacks a bit easier",
   "main": "index.js",
+  "bin": {
+    "stacker": "index.js"
+  },
   "scripts": {
     "prestart": "npm run build",
     "start": "node index.js",
