@@ -1,0 +1,30 @@
+{
+  "name": "stacker",
+  "version": "0.0.0",
+  "description": "Manage your AWS Cloudformation stacks a bit easier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexChesters/stacker.git"
+  },
+  "author": "Alex Chesters",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexChesters/stacker/issues"
+  },
+  "homepage": "https://github.com/AlexChesters/stacker#readme",
+  "dependencies": {
+    "commander": "^2.14.1"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
