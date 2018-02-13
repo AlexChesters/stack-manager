@@ -1,5 +1,5 @@
 {
-  "name": "stacker",
+  "name": "stack-manager",
   "version": "0.0.0",
   "description": "Manage your AWS Cloudformation stacks a bit easier",
   "main": "src/cli.js",
