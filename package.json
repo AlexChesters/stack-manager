@@ -2,15 +2,10 @@
   "name": "stacker",
   "version": "0.0.0",
   "description": "Manage your AWS Cloudformation stacks a bit easier",
-  "main": "index.js",
-  "bin": {
-    "stacker": "index.js"
-  },
+  "main": "src/index.js",
   "scripts": {
-    "prestart": "npm run build",
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c rollup.config.js"
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -31,8 +26,6 @@
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.6.1",
-    "eslint-plugin-standard": "^3.0.1",
-    "rollup": "^0.55.5",
-    "rollup-plugin-json": "^2.3.0"
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
