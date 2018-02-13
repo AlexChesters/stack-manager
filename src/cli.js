@@ -6,9 +6,9 @@ const create = require('./commands/create')
 
 program
   .command('create')
-  .arguments('<stack-name> <template-path>')
-  .action((name, templatePath) => (
-    create({ name, templatePath }))
+  .arguments('<project-name> <template-path>')
+  .action((projectName, templatePath) => (
+    create({ projectName, templatePath }))
   )
 
 program.parse(process.argv)

@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Manage your AWS Cloudformation stacks a bit easier",
   "main": "src/index.js",
+  "bin": {
+    "stack-manager": "src/cli.js"
+  },
   "scripts": {
     "start": "node src/cli.js",
     "test": "jest && eslint ."
