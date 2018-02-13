@@ -7,16 +7,16 @@ const deleteCommand = require('./commands/delete')
 
 program
   .command('create')
-  .arguments('<project-name> <template-path>')
-  .action((projectName, templatePath) => (
-    createCommand({ projectName, templatePath }))
+  .arguments('<template-path>')
+  .action((templatePath) => (
+    createCommand({ templatePath }))
   )
 
 program
   .command('delete')
-  .arguments('<project-name> <template-path>')
-  .action((projectName, templatePath) => (
-    deleteCommand({ projectName, templatePath })
+  .arguments('<template-path>')
+  .action((templatePath) => (
+    deleteCommand({ templatePath })
   ))
 
 program.parse(process.argv)

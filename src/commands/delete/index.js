@@ -4,9 +4,9 @@ const cloudformation = new AWS.CloudFormation({ region: 'eu-west-1' })
 
 const generateStackName = require('../../utils/generate-stack-name')
 
-module.exports = ({ projectName, templatePath }) => {
+module.exports = ({ templatePath }) => {
   const params = {
-    StackName: generateStackName(projectName, templatePath)
+    StackName: generateStackName(templatePath)
   }
   return cloudformation.deleteStack(params).promise()
 }

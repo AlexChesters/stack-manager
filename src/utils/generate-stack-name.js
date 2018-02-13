@@ -1,5 +1,5 @@
-module.exports = (projectName, templatePath) => {
+module.exports = (templatePath) => {
   const segments = templatePath.split('infrastructure/stacks/')
   const path = segments[segments.length - 1].replace(/\//g, '-').slice(0, -5)
-  return `${projectName}--${path}`
+  return `${require(`${process.cwd()}/package.json`).name}--${path}`
 }
