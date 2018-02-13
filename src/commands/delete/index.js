@@ -16,5 +16,6 @@ module.exports = ({ templatePath }) => {
       return cloudformation
         .waitFor('stackDeleteComplete', { StackName: stackName })
         .promise()
+        .then(() => console.log(`Stack ${stackName} deleted`))
     })
 }

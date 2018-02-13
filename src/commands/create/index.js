@@ -20,5 +20,6 @@ module.exports = ({ templatePath }) => {
       return cloudformation
         .waitFor('stackCreateComplete', { StackName: stackName })
         .promise()
+        .then(() => console.log(`Stack created as ${stackName}`))
     })
 }
