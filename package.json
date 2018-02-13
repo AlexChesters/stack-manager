@@ -2,9 +2,9 @@
   "name": "stacker",
   "version": "0.0.0",
   "description": "Manage your AWS Cloudformation stacks a bit easier",
-  "main": "src/index.js",
+  "main": "src/cli.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/cli.js",
     "test": "eslint ."
   },
   "repository": {
