@@ -1,5 +1,4 @@
-const create = require('./commands/create')
+const createCommand = require('./commands/create')
+const deleteCommand = require('./commands/delete')
 
-module.exports = {
-  create
-}
+module.exports = { create: createCommand, delete: deleteCommand }
