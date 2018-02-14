@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node src/cli.js",
-    "test": "jest && eslint ."
+    "test": "jest && eslint .",
+    "docs": "jsdoc --recurse --destination docs/ src"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.6.1",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^22.2.2"
+    "jest": "^22.2.2",
+    "jsdoc": "^3.5.5"
   }
 }
