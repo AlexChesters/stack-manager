@@ -8,8 +8,8 @@ const generateStackName = require('../../utils/generate-stack-name')
  * Deletes a Cloudformation stack
  * @function delete
  * @memberof stack-manager
- * @param {String} templatePath the path to your Cloudformation template.
- * @param {String} [capability] capability to specify when creating your stack.
+ * @param {String} templatePath The path to your Cloudformation template.
+ * @param {String} [capability] Capability to specify when creating your stack.
  * Defaults to 'CAPABILITY_IAM'. All capabilities can be found
  * [here]{@link https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html}.
  * @returns {Promise} Resolves when the stack enters the
