@@ -8,23 +8,23 @@ const updateCommand = require('./commands/update')
 
 program
   .command('create')
-  .arguments('<template-path>')
-  .action((templatePath) => (
-    createCommand({ templatePath }))
+  .arguments('<template-path> [capability]')
+  .action((templatePath, capability) => (
+    createCommand(templatePath, capability))
   )
 
 program
   .command('delete')
   .arguments('<template-path>')
   .action((templatePath) => (
-    deleteCommand({ templatePath })
+    deleteCommand(templatePath)
   ))
 
 program
   .command('update')
-  .arguments('<template-path>')
-  .action((templatePath) => (
-    updateCommand({ templatePath })
+  .arguments('<template-path> [capability]')
+  .action((templatePath, capability) => (
+    updateCommand(templatePath, capability)
   ))
 
 program.parse(process.argv)

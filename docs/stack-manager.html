@@ -109,7 +109,7 @@
     
 
     
-    <h4 class="name" id=".create"><span class="type-signature">(static) </span>create<span class="signature">(templatePath)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id=".create"><span class="type-signature">(static) </span>create<span class="signature">(templatePath, capability<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -141,6 +141,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -166,10 +168,53 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last">the path to your Cloudformation template.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capability</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">capability to specify when creating your stack.
+Defaults to 'CAPABILITY_IAM'. All capabilities can be found
+<a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html">here</a>.</td>
         </tr>
 
     
@@ -268,7 +313,7 @@ state.
     
 
     
-    <h4 class="name" id=".delete"><span class="type-signature">(static) </span>delete<span class="signature">(templatePath)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id=".delete"><span class="type-signature">(static) </span>delete<span class="signature">(templatePath, capability<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -300,6 +345,8 @@ state.
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -325,10 +372,53 @@ state.
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last">the path to your Cloudformation template.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capability</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">capability to specify when creating your stack.
+Defaults to 'CAPABILITY_IAM'. All capabilities can be found
+<a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html">here</a>.</td>
         </tr>
 
     
@@ -427,7 +517,7 @@ state.
     
 
     
-    <h4 class="name" id=".update"><span class="type-signature">(static) </span>update<span class="signature">(templatePath)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id=".update"><span class="type-signature">(static) </span>update<span class="signature">(templatePath, capability<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -459,6 +549,8 @@ state.
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -484,10 +576,53 @@ state.
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last">the path to your Cloudformation template.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>capability</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">capability to specify when creating your stack.
+Defaults to 'CAPABILITY_IAM'. All capabilities can be found
+<a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html">here</a>.</td>
         </tr>
 
     
@@ -602,7 +737,7 @@ state.
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Feb 14 2018 13:03:59 GMT+0000 (GMT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Feb 14 2018 14:30:10 GMT+0000 (GMT)
 </footer>
 
 <script> prettyPrint(); </script>

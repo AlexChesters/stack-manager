@@ -11,15 +11,18 @@ const cloudformation = new AWS.CloudFormation({ region: 'eu-west-1' })
  * @function update
  * @memberof stack-manager
  * @param {String} templatePath the path to your Cloudformation template.
+ * @param {String} [capability] capability to specify when creating your stack.
+ * Defaults to 'CAPABILITY_IAM'. All capabilities can be found
+ * [here]{@link https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html}.
  * @returns {Promise} Resolves when the stack enters the
  * [UPDATE_COMPLETE]{@link https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#w2ab2c15c15c17c11}
  * state.
  */
-module.exports = ({ templatePath }) => {
+module.exports = (templatePath, capability) => {
   const stackName = generateStackName(templatePath)
   const params = {
     StackName: stackName,
-    Capabilities: ['CAPABILITY_IAM'],
+    Capabilities: [capability || 'CAPABILITY_IAM'],
     TemplateBody: JSON.stringify(require(path.join(process.cwd(), templatePath)))
   }
   return cloudformation
