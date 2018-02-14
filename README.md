@@ -25,4 +25,4 @@ this name
 `stack-manager --help`
 
 ### JavaScript
-See the [documentation](https://alexchesters.github.io/stack-…).
+See the [documentation](https://alexchesters.github.io/stack-manager/).
