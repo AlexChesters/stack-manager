@@ -1,6 +1,6 @@
 {
   "name": "stack-manager",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Manage your AWS Cloudformation stacks a bit easier",
   "main": "src/index.js",
   "bin": {
