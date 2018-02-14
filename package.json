@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node src/cli.js",
     "test": "jest && eslint .",
-    "docs": "jsdoc --recurse --destination docs/ --readme README.md src"
+    "docs": "jsdoc --recurse --destination docs/ src"
   },
   "repository": {
     "type": "git",
