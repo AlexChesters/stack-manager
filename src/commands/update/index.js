@@ -1,4 +1,5 @@
 const path = require('path')
+const chalk = require('chalk')
 
 const AWS = require('aws-sdk')
 
@@ -32,6 +33,13 @@ module.exports = (templatePath, capability) => {
       return cloudformation
         .waitFor('stackUpdateComplete', { StackName: stackName })
         .promise()
-        .then(() => console.log(`Stack ${stackName} updated`))
+        .then(() => (
+          console.log(
+            chalk.green('[SUCCESS]') +
+            ' Stack ' +
+            chalk.green(stackName) +
+            ' updated'
+          )
+        ))
     })
 }

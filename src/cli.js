@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander')
+const chalk = require('chalk')
 
 const createCommand = require('./commands/create')
 const deleteCommand = require('./commands/delete')
@@ -12,7 +13,11 @@ program
   .action((templatePath, capability) => (
     createCommand(templatePath, capability)
       .catch((err) => {
-        console.error(`Error creating stack: ${err}`)
+        console.error(
+          chalk.red('[ERROR]') +
+          ' Error creating stack: ' +
+          chalk.red(err)
+        )
       })
   ))
 
@@ -22,7 +27,11 @@ program
   .action((templatePath) => (
     deleteCommand(templatePath)
       .catch((err) => {
-        console.error(`Error deleting stack: ${err}`)
+        console.error(
+          chalk.red('[ERROR]') +
+          ' Error deleting stack: ' +
+          chalk.red(err)
+        )
       })
   ))
 
@@ -32,7 +41,11 @@ program
   .action((templatePath, capability) => (
     updateCommand(templatePath, capability)
       .catch((err) => {
-        console.error(`Error updating stack: ${err}`)
+        console.error(
+          chalk.red('[ERROR]') +
+          ' Error updating stack: ' +
+          chalk.red(err)
+        )
       })
   ))
 

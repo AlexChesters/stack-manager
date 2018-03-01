@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk')
+const chalk = require('chalk')
 
 const cloudformation = new AWS.CloudFormation({ region: 'eu-west-1' })
 
@@ -25,6 +26,13 @@ module.exports = (templatePath) => {
       return cloudformation
         .waitFor('stackDeleteComplete', { StackName: stackName })
         .promise()
-        .then(() => console.log(`Stack ${stackName} deleted`))
+        .then(() => (
+          console.log(
+            chalk.green('[SUCCESS]') +
+            ' Stack ' +
+            chalk.green(stackName) +
+            ' deleted'
+          )
+        ))
     })
 }
