@@ -10,14 +10,20 @@ program
   .command('create')
   .arguments('<template-path> [capability]')
   .action((templatePath, capability) => (
-    createCommand(templatePath, capability))
-  )
+    createCommand(templatePath, capability)
+      .catch((err) => {
+        console.error(`Error creating stack: ${err}`)
+      })
+  ))
 
 program
   .command('delete')
   .arguments('<template-path>')
   .action((templatePath) => (
     deleteCommand(templatePath)
+      .catch((err) => {
+        console.error(`Error deleting stack: ${err}`)
+      })
   ))
 
 program
@@ -25,6 +31,9 @@ program
   .arguments('<template-path> [capability]')
   .action((templatePath, capability) => (
     updateCommand(templatePath, capability)
+      .catch((err) => {
+        console.error(`Error updating stack: ${err}`)
+      })
   ))
 
 program.parse(process.argv)
