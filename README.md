@@ -1,4 +1,6 @@
 # stack-manager
+[![npm version](https://badge.fury.io/js/stack-manager.svg)](https://badge.fury.io/js/stack-manager)
+
 Manage your AWS Cloudformation stacks a bit easier
 
 # Disclaimer
