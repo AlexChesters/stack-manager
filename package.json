@@ -10,6 +10,7 @@
     "start": "node src/cli.js",
     "test": "jest && eslint .",
     "docs": "jsdoc --recurse --destination docs/ src",
+    "watch:docs": "nodemon --ext js --watch src --exec \"npm run docs\"",
     "preversion": "npm run test",
     "version": "npm run docs && git add docs/",
     "postversion": "git push --follow-tags && npm publish"
