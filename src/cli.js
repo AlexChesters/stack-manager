@@ -9,9 +9,9 @@ const updateCommand = require('./commands/update')
 
 program
   .command('create')
-  .arguments('<template-path> [capability]')
-  .action((templatePath, capability) => (
-    createCommand(templatePath, capability)
+  .arguments('<template-path> [region] [capability]')
+  .action((templatePath, region, capability) => (
+    createCommand(templatePath, capability, region)
       .catch((err) => {
         console.error(
           chalk.red('[ERROR]') +
@@ -23,9 +23,9 @@ program
 
 program
   .command('delete')
-  .arguments('<template-path>')
-  .action((templatePath) => (
-    deleteCommand(templatePath)
+  .arguments('<template-path> [region]')
+  .action((templatePath, region) => (
+    deleteCommand(templatePath, region)
       .catch((err) => {
         console.error(
           chalk.red('[ERROR]') +
@@ -37,9 +37,9 @@ program
 
 program
   .command('update')
-  .arguments('<template-path> [capability]')
-  .action((templatePath, capability) => (
-    updateCommand(templatePath, capability)
+  .arguments('<template-path> [region] [capability]')
+  .action((templatePath, region, capability) => (
+    updateCommand(templatePath, capability, region)
       .catch((err) => {
         console.error(
           chalk.red('[ERROR]') +
