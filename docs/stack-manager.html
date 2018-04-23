@@ -109,7 +109,7 @@
     
 
     
-    <h4 class="name" id=".create"><span class="type-signature">(static) </span>create<span class="signature">(templatePath, capability<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id=".create"><span class="type-signature">(static) </span>create<span class="signature">(templatePath, capability<span class="signature-attributes">opt</span>, region<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -218,6 +218,40 @@ Defaults to 'CAPABILITY_IAM'. All capabilities can be found
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>region</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The region to create the Cloudformation stack in.
+Defaults to eu-west-1.</td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -255,7 +289,7 @@ Defaults to 'CAPABILITY_IAM'. All capabilities can be found
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commands_create_index.js.html">commands/create/index.js</a>, <a href="commands_create_index.js.html#line10">line 10</a>
+        <a href="commands_create_index.js.html">commands/create/index.js</a>, <a href="commands_create_index.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
@@ -313,7 +347,7 @@ state.
     
 
     
-    <h4 class="name" id=".delete"><span class="type-signature">(static) </span>delete<span class="signature">(templatePath)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id=".delete"><span class="type-signature">(static) </span>delete<span class="signature">(templatePath, region<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -345,6 +379,8 @@ state.
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -370,10 +406,52 @@ state.
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last">The path to your Cloudformation template.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>region</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The region where the Cloudformation stack is.
+Defaults to eu-west-1.</td>
         </tr>
 
     
@@ -414,7 +492,7 @@ state.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commands_delete_index.js.html">commands/delete/index.js</a>, <a href="commands_delete_index.js.html#line8">line 8</a>
+        <a href="commands_delete_index.js.html">commands/delete/index.js</a>, <a href="commands_delete_index.js.html#line6">line 6</a>
     </li></ul></dd>
     
 
@@ -472,7 +550,7 @@ state.
     
 
     
-    <h4 class="name" id=".update"><span class="type-signature">(static) </span>update<span class="signature">(templatePath, capability<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id=".update"><span class="type-signature">(static) </span>update<span class="signature">(templatePath, capability<span class="signature-attributes">opt</span>, region<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -581,6 +659,40 @@ Defaults to 'CAPABILITY_IAM'. All capabilities can be found
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>region</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The region where the Cloudformation stack is.
+Defaults to eu-west-1.</td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -618,7 +730,7 @@ Defaults to 'CAPABILITY_IAM'. All capabilities can be found
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="commands_update_index.js.html">commands/update/index.js</a>, <a href="commands_update_index.js.html#line10">line 10</a>
+        <a href="commands_update_index.js.html">commands/update/index.js</a>, <a href="commands_update_index.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
@@ -692,7 +804,7 @@ state.
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Mar 01 2018 15:47:04 GMT+0000 (GMT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Apr 23 2018 11:41:43 GMT+0100 (BST)
 </footer>
 
 <script> prettyPrint(); </script>
