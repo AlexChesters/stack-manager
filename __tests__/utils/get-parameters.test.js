@@ -9,11 +9,11 @@ describe('getParameters', function () {
     jest.unmock('fs')
   })
 
-  it('should return an empty array if no path is given', async function () {
-    expect(await getParameters()).toEqual([])
+  it('should return an empty array if no path is given', function () {
+    expect(getParameters()).toEqual([])
   })
-  fit('should adapt parameters to the expected format', async function () {
-    const params = await getParameters('params.json')
+  fit('should adapt parameters to the expected format', function () {
+    const params = getParameters('params.json')
     expect(params).toEqual([
       {
         ParameterKey: 'some key',
