@@ -8,6 +8,9 @@ const readFileSync = (fp) => {
   })
 }
 
+const existsSync = () => true
+
 fs.readFileSync = readFileSync
+fs.existsSync = existsSync
 
 module.exports = fs
