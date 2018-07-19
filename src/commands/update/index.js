@@ -11,7 +11,6 @@ const generateStackName = require('../../utils/generate-stack-name')
  * @function update
  * @memberof stack-manager
  * @param {String} templatePath The path to your Cloudformation template.
- *  * @param {String} [parameterPath] The path to your Cloudformation parameters.
  * @param {String} [capability] Capability to specify when creating your stack.
  * Defaults to 'CAPABILITY_IAM'. All capabilities can be found
  * [here]{@link https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html}.
@@ -21,14 +20,16 @@ const generateStackName = require('../../utils/generate-stack-name')
  * [UPDATE_COMPLETE]{@link https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#w2ab2c15c15c17c11}
  * state.
  */
-module.exports = (templatePath, parameterPath, capability, region = 'eu-west-1') => {
+module.exports = (templatePath, capability, region = 'eu-west-1') => {
   const cloudformation = new AWS.CloudFormation({ region })
   const stackName = generateStackName(templatePath)
+  const templateFp = path.join(process.cwd(), templatePath)
+  const parameterFp = path.join(templateFp, '../../', 'parameters', path.basename(templateFp))
   const params = {
     StackName: stackName,
     Capabilities: [capability || 'CAPABILITY_IAM'],
     TemplateBody: JSON.stringify(require(path.join(process.cwd(), templatePath))),
-    Parameters: getParameters()
+    Parameters: getParameters(parameterFp)
   }
   return cloudformation
     .updateStack(params)

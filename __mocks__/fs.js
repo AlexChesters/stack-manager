@@ -3,12 +3,9 @@
 const fs = jest.genMockFromModule('fs')
 
 const readFileSync = (fp) => {
-  return JSON.stringify([
-    {
-      key: 'some key',
-      value: 'some value'
-    }
-  ])
+  return JSON.stringify({
+    SomeKey: 'some-value'
+  })
 }
 
 fs.readFileSync = readFileSync

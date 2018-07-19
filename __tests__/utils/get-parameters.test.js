@@ -16,8 +16,8 @@ describe('getParameters', function () {
     const params = getParameters('params.json')
     expect(params).toEqual([
       {
-        ParameterKey: 'some key',
-        ParameterValue: 'some value'
+        ParameterKey: 'SomeKey',
+        ParameterValue: 'some-value'
       }
     ])
   })
