@@ -13,8 +13,10 @@ Here are some things `stack-manager` assumes about your project:
 `name` field and you would like to prefix your stack definitions with
 this name
 * Your templates are stored in a directory called
-`infrastructure/stacks`
+`infrastructure/stacks/templates`
   * They can be nested at any level below this
+* Any CloudFormation parameters must have the same file name as your template
+and be in a directory called `infrastructure/stacks/parameters`
 * Any CLI commands are ran from the root of your project
 
 # Installation

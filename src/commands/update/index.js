@@ -3,6 +3,7 @@ const chalk = require('chalk')
 
 const AWS = require('aws-sdk')
 
+const getParameters = require('../../utils/get-parameters')
 const generateStackName = require('../../utils/generate-stack-name')
 
 /**
@@ -22,10 +23,13 @@ const generateStackName = require('../../utils/generate-stack-name')
 module.exports = (templatePath, capability, region = 'eu-west-1') => {
   const cloudformation = new AWS.CloudFormation({ region })
   const stackName = generateStackName(templatePath)
+  const templateFp = path.join(process.cwd(), templatePath)
+  const parameterFp = path.join(templateFp, '../../', 'parameters', path.basename(templateFp))
   const params = {
     StackName: stackName,
     Capabilities: [capability || 'CAPABILITY_IAM'],
-    TemplateBody: JSON.stringify(require(path.join(process.cwd(), templatePath)))
+    TemplateBody: JSON.stringify(require(path.join(process.cwd(), templatePath))),
+    Parameters: getParameters(parameterFp)
   }
   return cloudformation
     .updateStack(params)
