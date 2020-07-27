@@ -3,6 +3,13 @@
 
 Manage your AWS Cloudformation stacks a bit easier
 
+# Important
+**`stack-manager` is deprecated**. Since this project was created the
+[AWS CLI](https://aws.amazon.com/cli/) has improved greatly for creating,
+updating and deleting CloudFormation stacks. If you are looked for a replacement
+tool, you'll do well to find a better and more-supported one.
+
+
 # Disclaimer
 `stack-manager` is very opinionated, it probably insists on certain
 things which you may not like. It's quite possible this tool isn't for
