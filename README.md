@@ -1,4 +1,5 @@
 # stack-manager
+[![deprecated](https://badges.github.io/stability-badges/dist/deprecated.svg)](https://github.com/badges/stability-badges)
 [![npm version](https://badge.fury.io/js/stack-manager.svg)](https://badge.fury.io/js/stack-manager)
 
 Manage your AWS Cloudformation stacks a bit easier
